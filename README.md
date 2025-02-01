@@ -1,2 +1,2 @@
 # JFSD
-Java full stack
+Java full stack Development
