@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Paper Model</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        p{
+            margin: 3px;
+            flex-basis: auto;
+            flex-basis: 150px;
+        }
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+        }
+        #q1{
+            border: 2px solid;
+            padding: 5px;
+        }
+        #q2{
+            padding: 5px;
+            border: 2px solid;
+            flex-shrink: 3;
+        }
+        #q3{
+            padding: 5px;
+            border: 2px solid;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="h1">News Paper</h1>
+   <div class="container">
+    <p id="q1">Lorem ipsum dolor sit.</p>
+    <p id="q2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, ea harum. Cupiditate adipisci fuga praesentium.
+    </p>
+    <p id="q3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint est cupiditate, vel cum sunt libero voluptatibus perferendis earum maiores corrupti voluptatum quam aspernatur voluptas culpa praesentium eius officiis distinctio vitae?
+    </p>
+   </div>
+</body>
+</html>
