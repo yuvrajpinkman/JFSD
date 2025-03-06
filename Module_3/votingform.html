@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>voting-form</title>
+    <style>
+        body{
+            background-color: beige;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid;
+            margin-left: 25%;
+            margin-right: 25%;
+            text-align: center;
+            background-color: rgb(129, 206, 202);
+        }
+        #a1{
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Voting Form with Validator</h1>
+    
+    <form id="f1">
+        <div id="a1">
+            <label for="name">
+                Name :
+                <input id="name" type="text" placeholder="Enter your name" required>
+            </label>
+        </div>
+        <br>
+        <div id="a2">
+            <label for="age">
+                Age :
+                <input id="i2" type="number" placeholder="Enter your age" required>
+            </label>
+        </div>
+        <br>
+        <div id="a3">
+            <label for="nationality">
+                Nationality : 
+                <input id="n2" type="text" placeholder="Enter your Nationality" required>
+            </label>
+        </div>
+        <br>
+        <input class="btn" type="submit" value="submit">
+
+        <h3>
+            Result : <span id="result" style="color: green;"></span>
+        </h3>
+    </form>
+
+    <script>
+        var form1 = document.getElementById('f1'); // queryselector can also be used
+        var name1 = document.getElementById('name');
+        var age1 = document.getElementById('i2');
+        var nation1 = document.getElementById('n2');
+        const result1 = document.getElementById('result');
+        form1.addEventListener('submit',function(event){
+            event.preventDefault();  //enables to run custom js script instead of refreshing the form
+            let name2 = name1.value;
+            let age2 = age1.value;
+            let nation2 = nation1.value.toLowerCase();
+            if(age2<0){
+                alert("Enter an valid age");
+            }
+            else{
+                if (age2>=18 && nation2 =='indian'){
+                    result1.style.color = 'green';
+                    result1.textContent = "Elegible";
+                }
+                else{
+                    result1.style.color = 'red';
+                    result1.textContent = "Inelegible";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
